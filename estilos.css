@@ -1,0 +1,21 @@
+body {
+    font-size: larger;
+    background-color: rgb(53, 56, 58);
+    font-style: italic;
+    color: aliceblue;
+    text-align: center;
+}
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 190px;
+    background-color: transparent;
+    border-radius: 5px 10px;
+    border-color: aliceblue;
+    color: aquamarine;
+} 
+input:hover {
+    border: 1px solid #080bd6;
+    box-shadow:1px 1px 10px #201eb6;
+}  
