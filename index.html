@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Calificaciones</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Gestión de Calificaciones</h1>
+
+    <!-- Login -->
+    <div id="login">
+        <h2>Iniciar sesión</h2>
+        <input type="email" id="email" placeholder="Correo electrónico">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="login()">Ingresar</button>
+    </div>  
+
+    <!-- Menú Principal -->
+    <div id="menu" style="display: none;">
+        <h2>Menú Principal</h2>
+        <p>Bienvenido, <span id="userName"></span></p>
+        <button onclick="mostrarPanel()">Acceder a Funciones</button>
+        <button onclick="logout()">Cerrar Sesión</button>
+    </div>
+
+    <!-- Panel de Administrativo -->
+    <div id="adminPanel" style="display: none;">
+        <h2>Funciones de Administrativo</h2>
+        <button onclick="registroUsuario()">Registrar usuario</button>
+        <button onclick="crearEvento()">Crear Evento</button>
+        <button onclick="mostrarAsignarUsuarios()">Asignar evento en el calendario</button>
+        <button onclick="volverMenu()">Volver</button>
+    </div>
+
+    <!-- Asignación de evento (Administrativo) -->
+    <div id="asignarUsuarios" style="display: none;">
+        <h2>Asignar Usuario al evento</h2>
+        <!-- Lista de estudiantes para asignar -->
+        <div id="listaUsuariosAsignacion"></div>
+        <h3>Selecciona el evento:</h3>
+        <div id="listaEventosAdmin"></div>
+        <button onclick="volverAdminPanel()">Volver</button>
+    </div>
+
+    <!-- Panel de Profesor -->
+    <div id="profesorPanel" style="display: none;">
+        <h2>Funciones de Profesor</h2>
+        <button onclick="mostrarGestionCursos()">Gestionar Cursos</button>
+        <button onclick="volverMenu()">Volver</button>
+    </div>
+
+    <!-- Gestión de Cursos (Vista Profesor) -->
+    <div id="gestionCursos" style="display: none;">
+        <h2>Mis Cursos</h2>
+        <div id="listaCursos"></div>
+        <button onclick="volverProfesorPanel()">Volver</button>
+    </div>
+
+    <!-- Gestión de Estudiantes en el Curso (Calificaciones) -->
+    <div id="gestionEstudiantes" style="display: none;">
+        <h2>Estudiantes del Curso: <span id="cursoActual"></span></h2>
+        <!-- Tabla de calificaciones -->
+        <div id="listaEstudiantesCalificaciones"></div>
+        <button onclick="guardarCalificaciones()">Guardar Calificaciones</button>
+        <button onclick="volverGestionCursos()">Volver</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
